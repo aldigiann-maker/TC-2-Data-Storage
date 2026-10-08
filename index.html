@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Packaging Supply Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div>
+            <h1>📦 Packaging Supply Hub</h1>
+            <p>Mini Productivity Dashboard</p>
+        </div>
+
+        <button id="themeToggle" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+
+    <!-- GREETING -->
+    <section class="greeting-card">
+
+        <div class="clock" id="currentTime">
+            00:00:00
+        </div>
+
+        <div class="date" id="currentDate">
+            Loading date...
+        </div>
+
+        <h2 id="greetingText">
+            Good Morning
+        </h2>
+
+        <div class="name-area">
+            <span id="welcomeName">Welcome!</span>
+
+            <button id="changeNameBtn">
+                Change Name
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard">
+
+        <!-- FOCUS TIMER -->
+        <section class="card timer-card">
+
+            <h2>⏱ Focus Timer</h2>
+
+            <div id="timerDisplay" class="timer-display">
+                25:00
+            </div>
+
+            <div class="timer-buttons">
+                <button id="startTimer">Start</button>
+                <button id="stopTimer">Stop</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+
+        </section>
+
+
+        <!-- TODO LIST -->
+        <section class="card todo-card">
+
+            <div class="card-title">
+                <h2>✅ To-Do List</h2>
+
+                <button id="sortTasksBtn">
+                    Sort
+                </button>
+            </div>
+
+            <div class="todo-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Add a task..."
+                >
+
+                <button id="addTaskBtn">
+                    Add
+                </button>
+
+            </div>
+
+            <ul id="taskList">
+                <!-- Tasks will appear here -->
+            </ul>
+
+        </section>
+
+
+        <!-- QUICK LINKS -->
+        <section class="card links-card">
+
+            <h2>🔗 Quick Links</h2>
+
+            <div class="link-input">
+
+                <input
+                    type="text"
+                    id="linkName"
+                    placeholder="Link name"
+                >
+
+                <input
+                    type="url"
+                    id="linkUrl"
+                    placeholder="https://example.com"
+                >
+
+                <button id="addLinkBtn">
+                    Add Link
+                </button>
+
+            </div>
+
+            <div id="linksContainer" class="links-container">
+                <!-- Quick links will appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Packaging Supply Hub © 2026
+        </p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
