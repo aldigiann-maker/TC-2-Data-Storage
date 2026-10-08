@@ -1,0 +1,482 @@
+/* ==============================
+   GLOBAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --border: #e5e7eb;
+    --danger: #ef4444;
+    --success: #16a34a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+    --bg: #111827;
+    --card: #1f2937;
+    --text: #f9fafb;
+    --muted: #9ca3af;
+    --primary: #60a5fa;
+    --primary-hover: #3b82f6;
+    --border: #374151;
+    --danger: #f87171;
+    --success: #4ade80;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* ==============================
+   HEADER
+================================ */
+
+.header {
+    width: 100%;
+    padding: 25px 7%;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ==============================
+   BUTTON
+================================ */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+
+    background: var(--primary);
+    color: white;
+
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.theme-btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.theme-btn:hover {
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* ==============================
+   GREETING
+================================ */
+
+.greeting-card {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+}
+
+.clock {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.date {
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+.greeting-card h2 {
+    margin-top: 18px;
+    font-size: 26px;
+}
+
+.name-area {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--muted);
+}
+
+.name-area button {
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   DASHBOARD
+================================ */
+
+.dashboard {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: 0 auto 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* ==============================
+   CARD
+================================ */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   TIMER
+================================ */
+
+.timer-card {
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 58px;
+    font-weight: 700;
+
+    margin: 25px 0;
+
+    letter-spacing: 3px;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+#stopTimer {
+    background: #6b7280;
+}
+
+#resetTimer {
+    background: var(--danger);
+}
+
+
+/* ==============================
+   TODO
+================================ */
+
+.card-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title h2 {
+    margin-bottom: 0;
+}
+
+#sortTasksBtn {
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+.todo-input {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+#taskList {
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.task-item span {
+    flex: 1;
+
+    word-break: break-word;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+
+    color: var(--muted);
+}
+
+.task-actions {
+    display: flex;
+
+    gap: 5px;
+}
+
+.task-actions button {
+    padding: 6px 9px;
+
+    font-size: 11px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.delete-btn {
+    background: var(--danger);
+}
+
+
+/* ==============================
+   QUICK LINKS
+================================ */
+
+.links-card {
+    grid-column: 1 / -1;
+}
+
+.link-input {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr auto;
+
+    gap: 10px;
+}
+
+.links-container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.quick-link {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--bg);
+}
+
+.quick-link a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.remove-link {
+    background: var(--danger);
+
+    padding: 5px 8px;
+
+    font-size: 11px;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .links-card {
+        grid-column: auto;
+    }
+
+    .link-input {
+        grid-template-columns: 1fr;
+    }
+
+    .clock {
+        font-size: 38px;
+    }
+
+    .timer-display {
+        font-size: 48px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .greeting-card,
+    .dashboard {
+        width: 92%;
+    }
+
+    .greeting-card {
+        padding: 25px 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .timer-buttons {
+        flex-wrap: wrap;
+    }
+}
